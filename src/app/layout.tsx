@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
+import { env } from "@/env";
 import "./globals.css";
+
+void env;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +22,7 @@ export const metadata: Metadata = {
     "SceneSet gives independent producers and growing teams a clear, collaborative space to plan the work, run the day and bring the room to life.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>{children}</body>
