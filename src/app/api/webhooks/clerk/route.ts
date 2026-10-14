@@ -3,7 +3,7 @@ import { Webhook } from "svix";
 
 import { db } from "@/db";
 import { users } from "@/db/schema";
-import { env } from "@/env";
+import { getEnv } from "@/env";
 
 type ClerkUserEvent = {
   type: "user.created" | "user.updated";
@@ -36,7 +36,7 @@ export async function POST(request: Request) {
 
   let event: ClerkUserEvent;
   try {
-    const webhook = new Webhook(env.CLERK_WEBHOOK_SECRET);
+    const webhook = new Webhook(getEnv().CLERK_WEBHOOK_SECRET);
     webhook.verify(payload, {
       "svix-id": svixId,
       "svix-timestamp": svixTimestamp,
