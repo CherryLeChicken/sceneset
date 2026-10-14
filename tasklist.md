@@ -68,7 +68,7 @@ This file is the authoritative build sequence for the AI coding agent.
 
 ## Module 5: Public marketing and compliance
 
-- [ ] **5.1 Complete the public marketing and compliance pages**
+- [x] **5.1 Complete the public marketing and compliance pages**
   - Keep the SceneSet landing page focused on the approved audience and problem. Add accessible Pricing, Privacy/PICS, and Terms pages or sections with navigation links.
   - **Verification Gate:** Test public routes at desktop and mobile widths; run an accessibility audit targeting WCAG 2.2 AA and a Lighthouse accessibility score of at least 95.
 
