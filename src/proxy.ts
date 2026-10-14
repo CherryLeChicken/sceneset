@@ -19,5 +19,6 @@ export const config = {
     "/dashboard/(.*)",
     "/events(.*)",
     "/settings(.*)",
+    "/api/imagekit/auth",
   ],
 };

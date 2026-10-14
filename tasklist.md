@@ -58,7 +58,7 @@ This file is the authoritative build sequence for the AI coding agent.
 
 ## Module 4: Media and event assets
 
-- [ ] **4.1 Configure ImageKit upload authentication**
+- [x] **4.1 Configure ImageKit upload authentication**
   - Add a server-side ImageKit helper and `/api/imagekit/auth` endpoint. Keep ImageKit private keys server-only.
   - **Verification Gate:** With configured test credentials, request the endpoint and confirm it returns a valid upload token, signature, expiry, and public key without private-key leakage.
 
