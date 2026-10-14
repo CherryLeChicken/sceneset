@@ -74,7 +74,7 @@ This file is the authoritative build sequence for the AI coding agent.
 
 ## Module 6: Core event workspace
 
-- [ ] **6.1 Build the dashboard event workspace list**
+- [x] **6.1 Build the dashboard event workspace list**
   - Create `/dashboard` with fictional demo events, event cards, date/venue/budget indicators, progress/readiness status, and an accessible create-event form.
   - **Verification Gate:** Create a fictional event, reload the dashboard, and confirm its card renders with no real personal data.
 
