@@ -32,7 +32,7 @@ export const workspaces = pgTable("workspaces", {
   stripeSubscriptionId: varchar("stripe_subscription_id", { length: 255 }),
   subscriptionStatus: varchar("subscription_status", { length: 50 }).default("free"),
   ...timestamps,
-});
+}).enableRLS();
 
 export const events = pgTable("events", {
   id: uuid("id").defaultRandom().primaryKey(),
@@ -47,7 +47,7 @@ export const events = pgTable("events", {
   budgetCap: numeric("budget_cap", { precision: 12, scale: 2 }).default("0.00"),
   bannerImageUrl: text("banner_image_url"),
   ...timestamps,
-});
+}).enableRLS();
 
 export const budgets = pgTable("budgets", {
   id: uuid("id").defaultRandom().primaryKey(),
@@ -63,7 +63,7 @@ export const budgets = pgTable("budgets", {
   status: varchar("status", { length: 50 }).default("Pending"),
   notes: text("notes"),
   ...timestamps,
-});
+}).enableRLS();
 
 export const tasks = pgTable("tasks", {
   id: uuid("id").defaultRandom().primaryKey(),
@@ -79,7 +79,7 @@ export const tasks = pgTable("tasks", {
   }),
   dueDate: timestamp("due_date", { withTimezone: true }),
   ...timestamps,
-});
+}).enableRLS();
 
 export const schedules = pgTable("schedules", {
   id: uuid("id").defaultRandom().primaryKey(),

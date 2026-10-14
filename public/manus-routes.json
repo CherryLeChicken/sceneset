@@ -1,1 +1,1 @@
-{"routes":[{"path":"/","title":"SceneSet"}]}
+{"routes":[{"path":"/","title":"SceneSet"},{"path":"/privacy","title":"Privacy & PICS"},{"path":"/sign-in","title":"Sign in"},{"path":"/sign-up","title":"Sign up"},{"path":"/dashboard","title":"Dashboard"}]}

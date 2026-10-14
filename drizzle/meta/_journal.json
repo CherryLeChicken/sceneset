@@ -8,6 +8,13 @@
       "when": 1791879774223,
       "tag": "0000_famous_secret_warriors",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791942699013,
+      "tag": "0001_complete_machine_man",
+      "breakpoints": true
     }
   ]
 }

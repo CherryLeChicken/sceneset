@@ -38,21 +38,21 @@ This file is the authoritative build sequence for the AI coding agent.
   - Define `users`, `workspaces`, `events`, `budgets`, `tasks`, `schedules`, `suppliers`, and `guests` with UUID primary keys, timestamps, required fields, and foreign-key delete behavior from the PRD.
   - **Verification Gate:** Run `npx drizzle-kit generate`; confirm eight tables, valid SQL, cascade relationships, and task assignee `SET NULL` behavior.
 
-- [ ] **2.3 Execute the initial database migration**
+- [x] **2.3 Execute the initial database migration**
   - Push the generated migration to the configured Neon PostgreSQL database. Enable the PRD-required RLS flags for `workspaces`, `events`, `budgets`, and `tasks` without exposing credentials.
   - **Verification Gate:** Run `npx drizzle-kit push` against a real authorized database; verify tables, foreign keys, RLS flags, and a reversible connection/query check. Do not mark complete using placeholder credentials.
 
 ## Module 3: Authentication and access control
 
-- [ ] **3.1 Configure Clerk provider and authentication pages**
+- [x] **3.1 Configure Clerk provider and authentication pages**
   - Install/configure Clerk, wrap the root layout with `ClerkProvider`, and create sign-in/sign-up routes with English labels and a visible privacy/PICS link.
   - **Verification Gate:** With configured test keys, load `/sign-in` and `/sign-up` and confirm both routes render without server or TypeScript errors.
 
-- [ ] **3.2 Protect application routes with Clerk middleware**
+- [x] **3.2 Protect application routes with Clerk middleware**
   - Leave the marketing routes public and require authentication for `/dashboard`, `/events/:eventId`, and other workspace routes.
   - **Verification Gate:** Confirm an unauthenticated request to `/dashboard` redirects to `/sign-in`, while `/` remains publicly accessible.
 
-- [ ] **3.3 Synchronize Clerk users through a verified webhook**
+- [x] **3.3 Synchronize Clerk users through a verified webhook**
   - Create `/api/webhooks/clerk` with Svix signature verification and upsert behavior for `user.created` and `user.updated` in `users`.
   - **Verification Gate:** Send a signed test webhook and verify the corresponding fictional/test user record is created or updated in the database.
 

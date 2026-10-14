@@ -40,9 +40,14 @@ export default function Home() {
           <a className="transition-colors hover:text-[#16202b]" href="#workflow">How it works</a>
           <a className="transition-colors hover:text-[#16202b]" href="#pricing">Pricing</a>
         </div>
-        <a href="#pricing" className="rounded-full bg-[#16202b] px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 focus:outline-2 focus:outline-offset-2 focus:outline-sky-500">
-          Get started <span aria-hidden="true">↗</span>
-        </a>
+        <div className="flex items-center gap-3">
+          <a href="/sign-in" className="hidden rounded-full px-4 py-3 text-sm font-semibold text-[#4d5d68] transition-colors hover:bg-white focus:outline-2 focus:outline-offset-2 focus:outline-sky-500 sm:inline-flex">
+            Sign in
+          </a>
+          <a href="/sign-up" className="rounded-full bg-[#16202b] px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 focus:outline-2 focus:outline-offset-2 focus:outline-sky-500">
+            Get started <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </nav>
 
       <section id="top" className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:px-10 lg:pb-32 lg:pt-20">
@@ -57,7 +62,7 @@ export default function Home() {
             SceneSet gives independent producers and growing teams a clear, collaborative space to plan the work, run the day and bring the room to life.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <a href="#pricing" className="inline-flex items-center justify-center rounded-full bg-[#16202b] px-7 py-4 font-semibold text-white shadow-lg shadow-slate-900/10 transition-transform hover:-translate-y-1 focus:outline-2 focus:outline-offset-2 focus:outline-sky-500">
+            <a href="/sign-up" className="inline-flex items-center justify-center rounded-full bg-[#16202b] px-7 py-4 font-semibold text-white shadow-lg shadow-slate-900/10 transition-transform hover:-translate-y-1 focus:outline-2 focus:outline-offset-2 focus:outline-sky-500">
               Start planning for free <span className="ml-3 text-[#a7e8ff]" aria-hidden="true">→</span>
             </a>
             <a href="#workflow" className="inline-flex items-center justify-center rounded-full px-5 py-4 font-semibold text-[#4d5d68] transition-colors hover:bg-white focus:outline-2 focus:outline-offset-2 focus:outline-sky-500">
