@@ -1,16 +1,17 @@
 import { SignUp } from "@clerk/nextjs";
+import Link from "next/link";
 
 export default function SignUpPage() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#f7f8f6] px-6 py-12">
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
-          <a
+          <Link
             href="/"
             className="text-sm font-semibold tracking-[-0.02em] text-[#4aa6c5]"
           >
             ← Back to SceneSet
-          </a>
+          </Link>
           <h1 className="mt-5 text-3xl font-semibold tracking-[-0.05em] text-[#16202b]">
             Create your SceneSet account
           </h1>
@@ -18,12 +19,17 @@ export default function SignUpPage() {
             Set up a workspace for the event you are bringing to life.
           </p>
         </div>
-        <SignUp routing="path" path="/sign-up" signInUrl="/sign-in" />
+        <SignUp
+          routing="path"
+          path="/sign-up"
+          signInUrl="/sign-in"
+          fallbackRedirectUrl="/dashboard"
+        />
         <p className="mt-5 text-center text-xs leading-5 text-[#829097]">
           By continuing, you acknowledge the SceneSet{" "}
-          <a href="/privacy" className="font-semibold text-[#4aa6c5] underline">
+          <Link href="/privacy" className="font-semibold text-[#4aa6c5] underline">
             Privacy &amp; PICS notice
-          </a>
+          </Link>
           .
         </p>
       </div>
